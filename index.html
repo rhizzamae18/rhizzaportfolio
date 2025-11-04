@@ -7,6 +7,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/project-gallery.css">
+
 </head>
 <body>
     <header class="header">
@@ -49,7 +51,7 @@
                 <a href="https://github.com/rhizzamae18"><i class='bx bxl-github'></i></a>
             </div>
 
-            <a href="files/DiscayaRhizzaMae_Resume.pdf" class="btn" download>Download Resume</a>
+            <a href="files/DiscayaRhizzaMae_Resume.pdf" class="btn" download>View Resume</a>
         </div>
     </section>
 
@@ -215,29 +217,13 @@
                 </div>
             </div>
             
-            <div class="project-card">
-                <span class="project-type">Web</span>
-                <img src="images/3.png" alt="Project 3" class="project-img">
-                <div class="project-content">
-                    <h3>CRISMYR Enterprise Optimized: An Integrated Project and Equipment Management System with Virtual Walkthroughs and Chat Integration</h3>
-                    <p>Assisted in the development of a construction enterprise management system that integrates equipment tracking, project scheduling, and real-time communication tools.</p>
-                    <div class="project-tech">
-                        <span>Figma</span>
-                        <span>Data Analyst</span>
-                        
-                    </div>
-                    <!-- <div class="project-links">
-                        <a href="#"><i class='bx bx-link-external'></i> Live Demo</a>
-                        <a href="#"><i class='bx bxl-github'></i> Code</a>
-                    </div> -->
-                </div>
-            </div>
+            
 
             <div class="project-card">
                 <span class="project-type">Mobile</span>
                 <img src="images/4.png" alt="Project 4" class="project-img">
                 <div class="project-content">
-                    <h3>Enhancing Continuous Ambulatory Peritoneal Dialysis (CAPD) Management through DialiEase: A Digital Approach to Home-Based Dialysis Monitoring</h3>
+                    <h3>DialiEase: A Digital Approach to Home-Based Dialysis Monitoring</h3>
                     <p>Created a digital health platform to help Peritoneal Dialysis patients log treatment sessions, monitor fluid balance, and transmit data to healthcare professionals in real time.</p>
                     <div class="project-tech">
                         <span>React Native</span>
@@ -246,10 +232,7 @@
                         <span>Node.js</span>
 						<span>Google Cloud MySql</span>
                     </div>
-                    <!-- <div class="project-links">
-                        <a href="#"><i class='bx bx-link-external'></i> Live Demo</a>
-                        <a href="#"><i class='bx bxl-github'></i> Code</a>
-                    </div> -->
+                    
                 </div>
             </div>
 
@@ -264,10 +247,7 @@
                         <span>Firebase</span>
                         <span>Figma</span>
                     </div>
-                    <!-- <div class="project-links">
-                        <a href="#"><i class='bx bx-link-external'></i> Live Demo</a>
-                        <a href="#"><i class='bx bxl-github'></i> Code</a>
-                    </div> -->
+                   
                 </div>
             </div>
         </div>
@@ -343,8 +323,52 @@
         </div>
     </div>
 </footer>
+<div class="project-modal" id="project-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-project-title">Project Title</h3>
+            <button class="close-modal" id="close-modal">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="project-gallery" id="project-gallery">
+                <!-- Gallery images will be inserted here by JavaScript -->
+            </div>
+            <div class="project-details">
+                <h4>Project Details</h4>
+                <p id="modal-project-description">Project description will appear here.</p>
+                
+                <div class="project-tech-modal" id="modal-project-tech">
+                    <!-- Technology tags will be inserted here by JavaScript -->
+                </div>
+                
+                <div class="project-links-modal" id="modal-project-links">
+                    <!-- Project links will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Lightbox -->
+<div class="image-lightbox" id="image-lightbox">
+    <div class="lightbox-content">
+        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+        <button class="close-lightbox" id="close-lightbox">
+            <i class='bx bx-x'></i>
+        </button>
+        <div class="lightbox-nav">
+            <button id="prev-image">
+                <i class='bx bx-chevron-left'></i>
+            </button>
+            <button id="next-image">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+        </div>
+    </div>
+</div>
 	<script src="js/script.js"></script>
+    <script src="js/project-gallery.js"></script>
 </body>
-
 </html>
-
